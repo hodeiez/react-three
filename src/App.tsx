@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { OrbitControls } from "@react-three/drei";
 import "./App.css";
+import { useFrame } from "react-three-fiber";
 const scale = (
   minOut: number,
   maxOut: number,
@@ -11,6 +13,12 @@ const scale = (
   return ((maxOut - minOut) * (val - min)) / (max - min) + minOut;
 };
 export function Test1() {
+  const myMesh = React.useRef() as any;
+
+  useFrame(({ clock }) => {
+    const a = Math.cos(clock.getElapsedTime());
+    myMesh.current.rotation.x = a;
+  });
   const [rotation, setRotation] = useState(0);
   const [globalCoords, setGlobalCoords] = useState({ x: 0, y: 0 });
 
@@ -68,6 +76,11 @@ export function Test1() {
         <boxGeometry args={[1, 32, 16]} />
         <meshStandardMaterial color="blue" transparent />
       </mesh>
+      <mesh ref={myMesh}>
+        <torusGeometry args={[26, 10, 200, 200]} />
+        <meshStandardMaterial color="yellow" transparent />
+      </mesh>
+      <OrbitControls />
     </>
   );
 }

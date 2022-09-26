@@ -1,6 +1,13 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import "./App.css";
-const scale = (minOut, maxOut, min, max, val) => {
+const scale = (
+  minOut: number,
+  maxOut: number,
+  min: number,
+  max: number,
+  val: number
+) => {
   return ((maxOut - minOut) * (val - min)) / (max - min) + minOut;
 };
 export function Test1() {
@@ -8,7 +15,7 @@ export function Test1() {
   const [globalCoords, setGlobalCoords] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const handleWindowMouseMove = (event) => {
+    const handleWindowMouseMove = (event: any) => {
       setGlobalCoords({
         x: event.screenX,
         y: event.screenY,
@@ -21,7 +28,7 @@ export function Test1() {
       window.removeEventListener("mousemove", handleWindowMouseMove);
     };
   }, []);
-  const rotate = (e) => {
+  const rotate = (e: any) => {
     setRotation(0.4);
   };
   return (

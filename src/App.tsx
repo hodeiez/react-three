@@ -15,7 +15,7 @@ const scale = (
 };
 export function Test1() {
   const myMesh = React.useRef() as any;
-  const myText = React.useRef() as any;
+
   useFrame(({ clock }) => {
     const a = Math.cos(clock.getElapsedTime());
     myMesh.current.rotation.x = a;

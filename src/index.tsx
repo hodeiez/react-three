@@ -4,13 +4,13 @@ import "./index.css";
 import { Test1 } from "./App";
 // import reportWebVitals from "./reportWebVitals";
 import { Canvas } from "react-three-fiber";
-import { Environment } from "@react-three/drei";
+
 const root = ReactDOM.createRoot(document.getElementById("root")!);
+
 root.render(
   <>
     <Canvas>
       <Test1 />
-      <Environment preset="night" background />
     </Canvas>
     <h3>
       scroll to zoom, click and move for orbit, or move mouse to move objects

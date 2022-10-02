@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { Test1 } from "./App";
-// import reportWebVitals from "./reportWebVitals";
+import { App } from "./App";
+
 import { Canvas } from "react-three-fiber";
 
 const root = ReactDOM.createRoot(document.getElementById("root")!);
@@ -10,11 +10,8 @@ const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
   <>
     <Canvas>
-      <Test1 />
+      <App />
     </Canvas>
-    <h3>
-      scroll to zoom, click and move for orbit, or move mouse to move objects
-    </h3>
   </>
 );
 

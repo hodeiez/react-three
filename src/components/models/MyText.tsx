@@ -17,7 +17,7 @@ export const MyText = (props: any) => {
       {...props}
     >
       {props.text}
-      <meshBasicMaterial side={2} color={"red"} transparent opacity={0.7} />
+      <meshBasicMaterial side={2} color={"black"} transparent opacity={0.8} />
     </Text>
   );
 };

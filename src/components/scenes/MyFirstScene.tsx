@@ -5,6 +5,8 @@ import "./../../App.css";
 import { MyText } from "components/models/MyText";
 import { MyStars } from "components/environment/MyStars";
 import { MySky } from "components/environment/MySky";
+import { TheThing } from "components/models/TheThing";
+import { My3DText } from "components/models/My3DText";
 
 export function MyFirstScene() {
   const time = new Date().getHours();
@@ -22,7 +24,10 @@ export function MyFirstScene() {
         mieDirectionalG={val.mieDirectionalG}
       />
       <MyStars />
-      <MyText text="hodei" />
+      <TheThing position={[20, 0, 10]} />
+      <TheThing position={[-20, 0, 10]} />
+      {/* <MyText text="hodei" /> */}
+      <My3DText text="hodei" position={[-10, -5, 0]} />
     </>
   );
 }

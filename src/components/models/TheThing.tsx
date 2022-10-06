@@ -1,5 +1,5 @@
-import { Center, Icosahedron, MeshDistortMaterial } from "@react-three/drei";
-import React, { useEffect, useState } from "react";
+import { Icosahedron, MeshDistortMaterial } from "@react-three/drei";
+import React, { useState } from "react";
 
 export const TheThing = (props: any) => {
   const [dist, setDist] = useState(0.5);

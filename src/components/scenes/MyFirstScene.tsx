@@ -2,7 +2,7 @@ import React from "react";
 import { OrbitControls } from "@react-three/drei";
 import "./../../App.css";
 
-import { MyText } from "components/models/MyText";
+// import { MyText } from "components/models/MyText";
 import { MyStars } from "components/environment/MyStars";
 import { MySky } from "components/environment/MySky";
 import { TheThing } from "components/models/TheThing";

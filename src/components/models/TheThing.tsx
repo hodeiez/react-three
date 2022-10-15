@@ -6,9 +6,15 @@ export const TheThing = (props: any) => {
   const wabble = () => {
     setDist(1);
   };
+
   return (
     <Icosahedron args={[1, 15]} {...props} scale={3} onClick={wabble}>
-      <MeshDistortMaterial color="red" speed={1} distort={dist} radius={0.5} />
+      <MeshDistortMaterial
+        speed={1}
+        distort={dist}
+        radius={0.5}
+        color="#2f2f2f"
+      ></MeshDistortMaterial>
     </Icosahedron>
   );
 };

@@ -1,8 +1,6 @@
 import React from "react";
 import { OrbitControls } from "@react-three/drei";
 import "./../../App.css";
-
-// import { MyText } from "components/models/MyText";
 import { MyStars } from "components/environment/MyStars";
 import { MySky } from "components/environment/MySky";
 import { TheThing } from "components/models/TheThing";
@@ -16,7 +14,10 @@ export function MyFirstScene() {
     mieDirectionalG: 0.01,
   };
   return (
-    <>
+    <ambientLight intensity={0.1}>
+      {/* <OrbitControls makeDefault position0={[0, 0, 1000]} /> */}
+      <directionalLight position={[0, 0, 30]} intensity={0.5} />
+      {/* <camera position={[0, 0, 0]}> */}
       <OrbitControls />
       <MySky
         rayleigh={val.rayleigh}
@@ -27,7 +28,8 @@ export function MyFirstScene() {
       <TheThing position={[20, 0, 10]} />
       <TheThing position={[-20, 0, 10]} />
       {/* <MyText text="hodei" /> */}
-      <My3DText text="hodei" position={[-10, -5, 0]} />
-    </>
+      <My3DText text="hodei" position={[-5, 0, 0]} />
+      {/* </camera> */}
+    </ambientLight>
   );
 }
